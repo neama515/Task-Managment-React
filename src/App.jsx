@@ -15,6 +15,8 @@ import SignIn from "./SignIn";
 import Projects from "./Pages/Projects/Projects";
 import Board from "./Pages/Board/Board";
 import BoardNav from "./Components/BoardNav/BoardNav";
+import Teams from "./Components/Teams/Teams";
+import Members from "./Pages/Members/Members";
 
 function App() {
   const router = createBrowserRouter([
@@ -56,6 +58,23 @@ function App() {
       element: (
         <ProtectedRoute>
           <Board />
+        </ProtectedRoute>
+      ),
+    },
+    {
+      path: "/teams/:projectId",
+      element: (
+        <ProtectedRoute>
+          {" "}
+          <Teams />{" "}
+        </ProtectedRoute>
+      ),
+    },
+    {
+      path: "/members/:projectId",
+      element: (
+        <ProtectedRoute>
+          <Members />
         </ProtectedRoute>
       ),
     },
