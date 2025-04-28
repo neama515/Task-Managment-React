@@ -5,6 +5,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Components/Layout/Layout";
 import Home from "./Components/Home/Home";
 import NoFound from './Components/NoFound/NoFound';
+import Usercontext from "./Components/UserContext/UserContext";
+import { ToastContainer } from "react-toastify";
+import SignUp from "./SignUp";
+import SignIn from "./SignIn";
 
 function App() {
  
@@ -14,7 +18,10 @@ function App() {
     { path: "*", element:<NoFound />},
     { path: "/", element: <Layout />, children: [
         { index: true, element: <Home /> },
-    ]}
+    ]},
+    { path: "/signin", element: <SignIn /> },
+    { path: "/signup", element: <SignUp /> },
+    
   ]);
 
   
@@ -22,7 +29,10 @@ function App() {
   
   return (
    
-        <RouterProvider router={router} />
+    <Usercontext>
+    <RouterProvider router={router} />
+    <ToastContainer />
+  </Usercontext>
        
   );
 }
