@@ -12,6 +12,8 @@ import Usercontext from "./Components/UserContext/UserContext";
 import { ToastContainer } from "react-toastify";
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
+import Projects from "./Pages/Projects/Projects";
+
 
 function App() {
  
@@ -33,6 +35,15 @@ function App() {
       ),
     },    
     { path: "/ProfileEdit", element: <ProtectedRoute><ProfileEdit /></ProtectedRoute> },
+
+    {
+      path: "/projects",
+      element: (
+        <ProtectedRoute>
+          <Projects />
+        </ProtectedRoute>
+      ),
+    },
 
     
   ]);
