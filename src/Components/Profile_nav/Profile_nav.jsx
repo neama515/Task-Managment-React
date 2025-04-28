@@ -6,6 +6,7 @@ import { usercontext } from "../../Components/UserContext/UserContext";
 import {  Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import profile1 from "../../Images/download.jpg";
+import SideBar from "../../Components/SideBar/SideBar";
 
 export default function Profile_nav() {
    const [obj, setObj] = useState(null);
@@ -64,7 +65,7 @@ let navigate=useNavigate()
         className={`flex py-1 items-center justify-between ${styles.profile_nav} `}
       >
         <div className="flex justify-between items-center">
-          
+          <SideBar/>
           {location.pathname == "/projects" ? (
             <span className="flex self-center justify-self-end whitespace-nowrap text-2xl font-semibold dark:text-white">
               Projects
