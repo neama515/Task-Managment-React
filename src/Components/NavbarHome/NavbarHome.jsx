@@ -61,8 +61,8 @@ export default function Navbar() {
 
           
                
-                <li><a href="/" className="text-gray-700 hover:text-black">Login</a></li>
-                <li><a href="/" className=" px-4 py-2 rounded-md nav_btn">Get Started</a></li>
+                <li><a href="/signin" className="text-gray-700 hover:text-black">Login</a></li>
+                <li><a href="/signup" className=" px-4 py-2 rounded-md nav_btn">Get Started</a></li>
  
           
           </ul>
