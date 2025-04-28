@@ -408,9 +408,7 @@ export default function Board() {
         return {
           userId: member.id,
           fullName: member.fullName,
-          image: member?.image?.startsWith("http")
-            ? member.image
-            : ``,
+          image: member?.image?.startsWith("http") ? member.image : ``,
         };
       });
 
@@ -688,7 +686,6 @@ export default function Board() {
       );
       setMembers(response.data || []);
       console.log(response.data);
-
     } catch (err) {
       console.error(
         "Error fetching members:",
@@ -1200,7 +1197,6 @@ export default function Board() {
                             {isSelected && (
                               <FaCheckCircle className="text-[#639eb0] ml-auto w-5 h-5" />
                             )}
-                            
                           </div>
                         );
                       })}
