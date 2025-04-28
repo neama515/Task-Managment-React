@@ -104,6 +104,7 @@ export default function Projects() {
         console.log("====================================");
         console.log(res.data);
         console.log("====================================");
+        
       })
       .catch((err) => {
         if (err.response) {
