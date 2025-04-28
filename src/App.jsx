@@ -4,6 +4,9 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Components/Layout/Layout";
 import Home from "./Components/Home/Home";
+import ProfileEdit from "./Pages/ProfileEdit/ProfileEdit";
+import ProfilePage from "./Pages/ProfilePage";
+import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
 import NoFound from './Components/NoFound/NoFound';
 import Usercontext from "./Components/UserContext/UserContext";
 import { ToastContainer } from "react-toastify";
@@ -21,6 +24,16 @@ function App() {
     ]},
     { path: "/signin", element: <SignIn /> },
     { path: "/signup", element: <SignUp /> },
+    {
+      path: "/profile",
+      element: (
+        <ProtectedRoute>
+          <ProfilePage />
+        </ProtectedRoute>
+      ),
+    },    
+    { path: "/ProfileEdit", element: <ProtectedRoute><ProfileEdit /></ProtectedRoute> },
+
     
   ]);
 
